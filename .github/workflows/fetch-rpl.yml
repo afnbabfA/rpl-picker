@@ -1,0 +1,35 @@
+name: fetch-rpl
+on:
+  schedule:
+    - cron: "0 6 * * *"     # codziennie 06:00 UTC (08:00 w PL latem, 07:00 zimą)
+  workflow_dispatch: {}
+permissions:
+  contents: write
+
+jobs:
+  update-rpl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Ensure data dir
+        run: mkdir -p data
+
+      - name: Download latest CSV (RPL)
+        run: |
+          curl -fL --retry 3 --retry-delay 10 \
+            "https://rejestrymedyczne.ezdrowie.gov.pl/api/rpl/medicinal-products/public-pl-report/get-csv" \
+            -o data/rpl.csv
+
+      - name: Commit if changed
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/rpl.csv
+            git commit -m "chore: update RPL CSV $(date -u +'%Y-%m-%d')"
+            git push
+          else
+            echo "No changes in data/rpl.csv"
+          fi
