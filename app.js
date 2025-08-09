@@ -59,7 +59,11 @@ function renderPresets() {
       const act = b.getAttribute("data-action");
       const i = PRESETS.findIndex(x => x.id === id);
       if (i === -1) return;
-      if (act === "load") { PICKED = PRESETS[i].items || []; renderPicked(); }
+      if (act === "load") {
+        // clone preset items so further edits don't mutate the saved preset
+        PICKED = (PRESETS[i].items || []).map(r => ({ ...r }));
+        renderPicked();
+      }
       if (act === "delete") { PRESETS.splice(i,1); savePresets(); renderPresets(); }
     };
   });
@@ -203,7 +207,8 @@ EL("btnSavePreset").addEventListener("click", () => {
   if (PICKED.length === 0) { alert("Dodaj najpierw pozycje."); return; }
   const label = prompt("Nazwa presetu");
   if (!label) return;
-  PRESETS.push({ id: crypto.randomUUID(), label, items: PICKED });
+  // store a copy of picked items to avoid later mutations affecting the preset
+  PRESETS.push({ id: crypto.randomUUID(), label, items: PICKED.map(r => ({ ...r })) });
   savePresets(); renderPresets();
 });
 
