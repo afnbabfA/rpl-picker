@@ -99,7 +99,9 @@ async function loadFromFile(file) {
   } else {
     Papa.parse(file, {
       header: true,
-      skipEmptyLines: true,
+      delimiter: ';',
+      newline: '\r\n',
+      skipEmptyLines: 'greedy',
       complete: (res) => {
         ROWS = res.data.map(mapRow).filter(r => r.name);
         EL("status").textContent = `Załadowano wierszy: ${ROWS.length}`;
@@ -119,7 +121,9 @@ EL("btnLoadRepo").addEventListener("click", async () => {
     const text = await res.text();
     Papa.parse(text, {
       header: true,
-      skipEmptyLines: true,
+      delimiter: ';',
+      newline: '\r\n',
+      skipEmptyLines: 'greedy',
       complete: (r) => {
         ROWS = r.data.map(mapRow).filter(r => r.name);
         EL("status").textContent = `Załadowano wierszy: ${ROWS.length}`;
