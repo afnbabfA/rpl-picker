@@ -6,6 +6,7 @@ Strona statyczna do wybierania produktów leczniczych z Rejestru Produktów Lecz
 - Działa na **GitHub Pages** (branch `main`, folder `/`).
 - Można też osadzić na **Google Sites** jako iframe.
 
+
 ## Skąd dane?
 - Codziennie o 06:00 UTC workflow pobiera CSV z RPL:
   - **CSV (pełny raport):**
