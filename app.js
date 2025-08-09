@@ -5,11 +5,21 @@ let PRESETS = [];  // local presets
 
 /* Column header mapping */
 const columnMap = {
-  name: ["Nazwa produktu","Nazwa Produktu","nazwa_produktu","Nazwa"],
+  name: [
+    "Nazwa produktu",
+    "Nazwa Produktu",
+    "nazwa_produktu",
+    "Nazwa",
+    "Nazwa Produktu Leczniczego"
+  ],
   form: ["Postać farmaceutyczna","Postac farmaceutyczna","Postać","postac"],
   strength: ["Moc","Dawka","moc"],
   pack: ["Wielkość opakowania","Wielkosc opakowania","Wielkość","opakowanie"],
-  route: ["Droga podania","droga_podania"],
+  route: [
+    "Droga podania",
+    "droga_podania",
+    "Droga podania - Gatunek - Tkanka - Okres karencji"
+  ],
   mah: ["Podmiot odpowiedzialny","podmiot_odpowiedzialny"],
   ean: ["EAN","Kod EAN","ean"]
 };
