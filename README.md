@@ -11,6 +11,7 @@ Strona statyczna do wybierania produktów leczniczych z Rejestru Produktów Lecz
 - Codziennie o 06:00 UTC workflow pobiera CSV z RPL:
   - **CSV (pełny raport):**
     `https://rejestrymedyczne.ezdrowie.gov.pl/api/rpl/medicinal-products/public-pl-report/get-csv`
+  - Po pobraniu tworzona jest wersja skrócona (`data/rpl.csv`) zawierająca tylko kolumny potrzebne aplikacji.
 
   Alternatywnie dostępny jest też zestaw w portalu Otwarte Dane (dane.gov.pl), ale w repo domyślnie używamy bezpośredniego CSV CeZ.
 
@@ -22,7 +23,7 @@ Strona statyczna do wybierania produktów leczniczych z Rejestru Produktów Lecz
 3. Po chwili strona będzie pod adresem `https://<twoje_konto>.github.io/rpl-picker/`
 
 ## Jak to działa (front)
-- Użytkownik może **wczytać lokalny plik CSV/XLSX** (pełna prywatność) **lub** kliknąć „Wczytaj CSV z repozytorium” — wtedy strona pobierze `data/rpl.csv` z tego repo (zaktualizowany przez workflow).
+- Użytkownik może **wczytać lokalny plik CSV/XLSX** (pełna prywatność) **lub** kliknąć „Wczytaj CSV z repozytorium” — wtedy strona pobierze skrócony plik `data/rpl.csv` z tego repo (zaktualizowany przez workflow).
 - Wyszukiwanie po nazwie + wybór mocy/opakowania na podstawie realnych kombinacji z CSV.
 - Lista wybranych + **presety** zapisywane lokalnie (`localStorage`).
 - **PDF** generowany w przeglądarce (jsPDF).
@@ -30,7 +31,8 @@ Strona statyczna do wybierania produktów leczniczych z Rejestru Produktów Lecz
 ## Pliki
 - `index.html` — strona główna (React z CDN, bez budowania).
 - `app.js` — logika (parsowanie CSV `Papa.parse`, PDF `jsPDF`).
-- `data/rpl.csv` — aktualny CSV (automatycznie aktualizowany; może być nieobecny zaraz po klonie, pojawi się po pierwszym workflow).
+- `data/rpl.csv` — skrócony CSV z potrzebnymi kolumnami (automatycznie aktualizowany; może być nieobecny zaraz po klonie, pojawi się po pierwszym workflow).
+`data/rpl-full.csv` — pełny CSV pobrany z API (dla pełnego wglądu, nieużywany przez aplikację; może być nieobecny zaraz po klonie, pojawi się po pierwszym workflow).
 - `.github/workflows/fetch-rpl.yml` — pobieranie CSV codziennie.
 - `.nojekyll` — dla GitHub Pages.
 - `LICENSE` — MIT.

@@ -16,18 +16,33 @@ jobs:
       - name: Ensure data dir
         run: mkdir -p data
 
-      - name: Download latest CSV (RPL)
+      - name: Install dependencies
+        run: npm install
+
+      - name: Download latest CSV (RPL) and trim
         run: |
+          set -e
           curl -fL --retry 3 --retry-delay 10 \
             "https://rejestrymedyczne.ezdrowie.gov.pl/api/rpl/medicinal-products/public-pl-report/get-csv" \
-            -o data/rpl.csv
+            -o data/rpl-full.csv.new
+          if [ -f data/rpl-full.csv ]; then
+            old_md5=$(md5sum data/rpl-full.csv | cut -d' ' -f1)
+            new_md5=$(md5sum data/rpl-full.csv.new | cut -d' ' -f1)
+            if [ "$old_md5" = "$new_md5" ]; then
+              echo "No changes in downloaded file"
+              rm data/rpl-full.csv.new
+              exit 0
+            fi
+          fi
+          mv data/rpl-full.csv.new data/rpl-full.csv
+          node scripts/trim-rpl.js data/rpl-full.csv data/rpl.csv
 
       - name: Commit if changed
         run: |
           if [ -n "$(git status --porcelain)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/rpl.csv
+            git add data/rpl.csv data/rpl-full.csv
             git commit -m "chore: update RPL CSV $(date -u +'%Y-%m-%d')"
             git push
           else
