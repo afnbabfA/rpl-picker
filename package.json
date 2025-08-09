@@ -1,0 +1,15 @@
+{
+  "name": "rpl-picker",
+  "version": "1.0.0",
+  "description": "RPL picker",
+  "main": "app.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "papaparse": "^5.4.1"
+  }
+}
