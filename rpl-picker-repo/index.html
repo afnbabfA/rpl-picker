@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RPL Picker + PDF</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css">
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; background:#f7f7f8; }
+      .container { max-width: 1100px; margin: 24px auto; padding: 0 16px; }
+      .card { background:#fff; border:1px solid #e5e7eb; border-radius:16px; box-shadow: 0 1px 2px rgba(0,0,0,.03); padding:16px 18px; margin-bottom:16px; }
+      .row { display: grid; grid-template-columns: 1fr; gap:12px; }
+      @media(min-width: 900px){ .row-3 { grid-template-columns: 1.2fr 1fr 1fr; } }
+      .label { font-size:13px; color:#374151; margin-bottom:4px; display:block; }
+      input[type="text"], select, input[type="file"] { width:100%; padding:10px 12px; border-radius:10px; border:1px solid #d1d5db; outline:none; }
+      button { display:inline-flex; align-items:center; gap:8px; padding:10px 14px; border-radius:10px; border:1px solid #d1d5db; background:#0ea5e9; color:#fff; cursor:pointer; }
+      button.secondary { background:#f3f4f6; color:#111827; }
+      button.ghost { background:#fff; color:#111827; }
+      .badge { display:inline-block; background:#f3f4f6; border:1px solid #e5e7eb; padding:4px 8px; border-radius:999px; font-size:12px; }
+      .muted { color:#6b7280; font-size:12px; }
+      .list-item { display:flex; align-items:center; justify-content:space-between; padding:8px 10px; border:1px solid #e5e7eb; border-radius:10px; background:#fff; }
+      .danger { background:#ef4444; }
+      .warning { background:#f59e0b; }
+      .success { background:#10b981; }
+      .hidden { display:none; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
+        <h1 style="font-size:22px; margin:0;">RPL Picker + PDF</h1>
+        <div class="muted">Dane przetwarzane w przeglądarce</div>
+      </header>
+
+      <div class="card">
+        <h2>1) Dane RPL</h2>
+        <div class="row">
+          <div>
+            <label class="label">Wczytaj lokalny plik CSV/XLSX</label>
+            <input id="fileInput" type="file" accept=".csv,.xlsx" />
+          </div>
+          <div>
+            <label class="label">Albo pobierz CSV z repozytorium (data/rpl.csv)</label>
+            <button id="btnLoadRepo" class="secondary">Wczytaj CSV z repozytorium</button>
+            <div class="muted">CSV jest automatycznie aktualizowany m.in. raz dziennie przez GitHub Actions.</div>
+            <div id="loadInfo" class="muted"></div>
+          </div>
+        </div>
+        <div id="status" class="muted"></div>
+      </div>
+
+      <div class="card">
+        <h2>2) Wyszukaj i wybierz lek</h2>
+        <div class="row row-3">
+          <div>
+            <label class="label">Nazwa</label>
+            <input id="q" type="text" placeholder="np. Paracetamol" />
+            <div id="suggestions" class="card" style="padding:8px; margin-top:8px; max-height:200px; overflow-y:auto; display:none;"></div>
+          </div>
+          <div>
+            <label class="label">Moc / dawka</label>
+            <select id="strength"><option value="">—</option></select>
+          </div>
+          <div>
+            <label class="label">Wielkość opakowania</label>
+            <select id="pack"><option value="">—</option></select>
+          </div>
+        </div>
+        <div style="margin-top:8px; display:flex; gap:8px;">
+          <button id="btnAdd">Dodaj do zestawienia</button>
+          <button id="btnClear" class="secondary">Wyczyść</button>
+        </div>
+        <div style="margin-top:8px;">
+          <div class="label">Wybrane pozycje</div>
+          <div id="picked"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>3) Presety</h2>
+        <div style="display:flex; gap:8px; margin-bottom:8px;">
+          <button id="btnSavePreset" class="secondary">Zapisz jako preset</button>
+        </div>
+        <div id="presets"></div>
+      </div>
+
+      <div class="card">
+        <h2>4) PDF</h2>
+        <button id="btnPdf">Pobierz PDF</button>
+        <div class="muted">PDF generowany lokalnie (jsPDF).</div>
+      </div>
+
+      <footer class="muted" style="margin-top:12px;">
+        * Dane z CSV RPL: aktualizowane automatycznie w repo (CeZ). W trybie „upload” wszystko dzieje się lokalnie.
+      </footer>
+    </div>
+
+    <!-- Dependencies via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
