@@ -67786,7 +67786,7 @@ Polska";"";"";"art. 15 ust. 1 pkt 2";"https://rejestrymedyczne.ezdrowie.gov.pl/a
 "100257204";"Debridat";"Trimebutinum";"Ludzki";"";"";"doustna";"7,87 mg/g";"Granulat do sporządzania zawiesiny doustnej";"IR";"223/11";"2026-06-29";"A03AA05";"Delfarma Sp. z o.o.";"05909997198187 ¦ Rp ¦ 45954
 1 butelka 250 ml";"";"";"";"";"";"";"";"Pfizer Europe MA EEIG";"Rumunia";"";"";"";"";"";"";"";"";""
 "100257240";"Primolut-Nor";"Norethisteroni acetas";"Ludzki";"";"";"doustna";"5 mg";"Tabletki";"IR";"227/11";"2031-06-29";"G03DC02";"InPharm Sp. z o.o.";"05909991411046 ¦ Rp ¦ 133603
-30 tabl.";"";"";"";"";"";"";"";"Bayer AG";"Bułgaria";"";"";"";"";"";"";"";"";""
+30 tabl.";"";"";"";"";"";"";"";"Bayer AG";"Bułgaria";"";"";"";"";"https://rejestrymedyczne.ezdrowie.gov.pl/api/rpl/medicinal-products/25724/parallel-import-files/LEAFLET/public";"";"https://rejestrymedyczne.ezdrowie.gov.pl/api/rpl/medicinal-products/25724/parallel-import-files/PACKAGE_MARKING/public";"";""
 "100257285";"Reparil";"Escinum";"Ludzki";"";"";"doustna";"20 mg";"Tabletki dojelitowe";"IR";"120/11";"2031-04-27";"C05CA07";"Delfarma Sp. z o.o.";"05909997196794 ¦ OTC ¦ 46826
 20 tabl.
 05909997196800 ¦ OTC ¦ 47086
@@ -67854,7 +67854,7 @@ Finlandia";"";"";"art. 15 ust. 1 pkt 2";"https://rejestrymedyczne.ezdrowie.gov.p
 "100257960";"Kreon Travix";"Pancreatinum";"Ludzki";"";"";"doustna";"10 000 j.Ph.Eur. lipazy";"Kapsułki dojelitowe, twarde";"IR";"262/11";"2031-07-25";"A09AA02";"InPharm Sp. z o.o.";"05909997198286 ¦ OTC ¦ 64559
 50 kaps.
 05909991272388 ¦ OTC ¦ 115304
-20 kaps.";"";"";"";"";"";"";"";"Viatris Healthcare Limited";"Węgry";"";"";"";"";"https://rejestrymedyczne.ezdrowie.gov.pl/api/rpl/medicinal-products/25796/parallel-import-files/LEAFLET/public";"";"";"";""
+20 kaps.";"";"";"";"";"";"";"";"Viatris Healthcare Limited";"Węgry";"";"";"";"";"https://rejestrymedyczne.ezdrowie.gov.pl/api/rpl/medicinal-products/25796/parallel-import-files/LEAFLET/public";"";"https://rejestrymedyczne.ezdrowie.gov.pl/api/rpl/medicinal-products/25796/parallel-import-files/PACKAGE_MARKING/public";"";""
 "100258209";"Yasmin";"Ethinylestradiolum + Drospirenonum";"Ludzki";"";"";"doustna";"0,03 mg + 3 mg";"Tabletki powlekane";"IR";"7/11";"2026-01-27";"G03AA12";"InPharm Sp. z o.o.";"05909997195223 ¦ Rp ¦ 66533
 21 tabl.
 05909997195230 ¦ Rp ¦ 66588
@@ -151892,8 +151892,6 @@ w wodzie do picia lub w mleku - świnia - tkanki jadalne - 3 dni";"140 mg/ml";"R
 1 butelka 500 ml w pudełku
 3411112965403 ¦ Rp ¦ 128408
 1 butelka 1000 ml w pudełku";"Paromycini sulfas 200 mg/1 ml";"Ceva Sante Animale";"Francja";"";"";"Ceva Sante Animale";"Francja";"";"";"art. 15a ust. 1";"https://rejestrymedyczne.ezdrowie.gov.pl/api/rpl/medicinal-products/40611/leaflet";"https://rejestrymedyczne.ezdrowie.gov.pl/api/rpl/medicinal-products/40611/characteristic";"";"";"";"";"";""
-"100406124";"Amoksiklav";"Amoxicillinum + Acidum clavulanicum";"Ludzki";"";"";"doustna";"875 mg + 125 mg";"Tabletki powlekane";"IR";"143/18";"2023-05-24";"J01CR02";"Pretium Farm Sp. z o.o.";"05902023777837 ¦ Rp ¦ 128411
-14 tabl.";"Amoxicillinum 875 mg + Acidum clavulanicum 125 mg";"";"";"";"";"";"";"Lek Pharmaceuticals d.d.";"Rumunia";"";"";"";"";"";"";"";"";""
 "100406130";"Megalotect CP";"Cytomegalovirus immunoglobulinum humanum";"Ludzki";"";"";"dożylna";"100 U/ml";"Roztwór do infuzji";"MRP";"25708";"Bezterminowe";"J06BB09";"Biotest Pharma GmbH";"04036124025465 ¦ Lz ¦ 130891
 1 fiol. 10 ml
 ¦ UR/Z/4c/191/25 - 04150069391789 ¦ UR/Z/4c/241/25 - 04150069391789
@@ -151932,10 +151930,6 @@ Octapharma Pharmazeutika Produktionsges.m.g.H.";"Francja
 Szwecja
 Niemcy
 Austria";"";"";"art. 10 ust. 1 i 2 ";"https://rejestrymedyczne.ezdrowie.gov.pl/api/rpl/medicinal-products/40616/leaflet";"https://rejestrymedyczne.ezdrowie.gov.pl/api/rpl/medicinal-products/40616/characteristic";"";"";"";"";"";""
-"100406176";"LisiHEXAL 20";"Lisinoprilum";"Ludzki";"";"";"doustna";"20 mg";"Tabletki";"IR";"144/18";"2023-05-24";"C09AA03";"Pretium Farm Sp. z o.o.";"05902023777653 ¦ Rp ¦ 128412
-30 tabl.";"Lisinoprilum 20 mg";"";"";"";"";"";"";"Sandoz B.V.";"Holandia";"";"";"";"";"";"";"";"";""
-"100406182";"Amlopin 10 mg";"Amlodipinum";"Ludzki";"";"";"doustna";"10 mg";"Tabletki";"IR";"145/18";"2023-05-24";"C08CA01";"Pretium Farm Sp. z o.o.";"05902023776502 ¦ Rp ¦ 128413
-30 tabl.";"Amlodipinum 10 mg";"";"";"";"";"";"";"Sandoz B.V.";"Holandia";"";"";"";"";"";"";"";"";""
 "100406213";"Inovox Express Active smak miętowy";"Alcohol 2,4-dichlorobenzylicus + Amylmetacresolum";"Ludzki";"";"";"na śluzówkę jamy ustnej";"1,2 mg + 0,6 mg";"Pastylki twarde";"NAR";"27101";"2027-05-31";"R02AA03";"US Pharmacia Sp. z o.o.";"05903031285888 ¦ OTC ¦ 144504
 12 pastylek
 05903031285871 ¦ OTC ¦ 144902
@@ -182212,7 +182206,7 @@ Czechy";"";"";"art. 15 ust. 1 pkt 2";"https://rejestrymedyczne.ezdrowie.gov.pl/a
 05909991455125 ¦ Rp ¦ 140423
 56 tabl.
 05909991455132 ¦ Rp ¦ 140424
-98 tabl.";"Candesartanum cilexetili 32 mg";"";"";"";"";"";"";"Zentiva Portugal, Lda";"Portugalia";"";"";"";"";"";"";"";"";""
+98 tabl.";"Candesartanum cilexetili 32 mg";"";"";"";"";"";"";"Zentiva Portugal, Lda";"Portugalia";"";"";"";"";"https://rejestrymedyczne.ezdrowie.gov.pl/api/rpl/medicinal-products/45292/parallel-import-files/LEAFLET/public";"";"https://rejestrymedyczne.ezdrowie.gov.pl/api/rpl/medicinal-products/45292/parallel-import-files/PACKAGE_MARKING/public";"";""
 "100452934";"FDG Pozyton";"Fludeoxyglucosum (18F)";"Ludzki";"";"";"dożylna";"3000 MBq/ml na czas kalibracji";"Roztwór do wstrzykiwań";"NAR";"26425";"Bezterminowe";"V09IX04";"Centrum Onkologii im. prof. Franciszka Łukaszczyka w Bydgoszczy";"05909991455149 ¦ Lz ¦ 140427
 1 fiol.  1 ml-13 ml";"Fludeoxyglucosum  (18F) 250-3100 MBq/ml";"";"";"";"";"Centrum Onkologii im. prof. Franciszka Łukaszczyka w Bydgoszczy";"Polska";"";"";"art. 16 ust. 1 ";"https://rejestrymedyczne.ezdrowie.gov.pl/api/rpl/medicinal-products/45293/leaflet";"https://rejestrymedyczne.ezdrowie.gov.pl/api/rpl/medicinal-products/45293/characteristic";"";"";"";"";"";""
 "100452941";"Hyrimoz";"Adalimumabum";"Ludzki";"";"";"podskórna";"20 mg";"Roztwór do wstrzykiwań w ampułko-strzykawce";"CEN";"";"";"L04AB04";"Sandoz GmbH";"07613421130657 ¦ Rpz ¦ EU/1/18/1286/019 ¦ 140425
@@ -183039,7 +183033,7 @@ podanie doustne - pies";"500 mg";"Tabletka";"DCP";"3109";"Bezterminowe";"QP51AA0
 08436596260047 ¦ Rpz ¦ EU/1/20/1509/002 ¦ 140844
 1 fiol. 16 ml";"Bevacizumabum 25 mg/ml";"GH GENHELIX S.A.";"Hiszpania";"";"";"GH GENHELIX S.A.";"Hiszpania";"";"";"";"";"";"";"";"";"";"";""
 "100454346";"Pentohexal 600 Retard";"Pentoxifyllinum";"Ludzki";"";"";"doustna";"600 mg";"Tabletki o przedłużonym uwalnianiu";"IR";"228/21";"2031-06-30";"C04AD03";"Medezin Sp. z o.o.";"05909991458072 ¦ Rp ¦ 140845
-30 tabl.";"Pentoxifyllinum 600 mg";"";"";"";"";"";"";"HEXAL AG";"Bułgaria";"";"";"";"";"";"";"";"";""
+30 tabl.";"Pentoxifyllinum 600 mg";"";"";"";"";"";"";"HEXAL AG";"Bułgaria";"";"";"";"";"https://rejestrymedyczne.ezdrowie.gov.pl/api/rpl/medicinal-products/45434/parallel-import-files/LEAFLET/public";"";"https://rejestrymedyczne.ezdrowie.gov.pl/api/rpl/medicinal-products/45434/parallel-import-files/PACKAGE_MARKING/public";"";""
 "100454353";"Roticox";"Etoricoxibum";"Ludzki";"";"";"doustna";"60 mg";"Tabletki powlekane";"IR";"227/21";"2031-06-30";"M01AH05";"InPharm Sp. z o.o.";"05909991458089 ¦ Rp ¦ 140846
 7 tabl.
 05909991458096 ¦ Rp ¦ 140847
